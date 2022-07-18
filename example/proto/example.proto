@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "gen/api";
+
+service ExampleService { rpc echo(echoRequest) returns (echoResponse); }
+
+message echoRequest { string content = 1; }
+
+message echoResponse { string content = 1; }
